@@ -3,3 +3,7 @@
 ```bash
 간단한 포트폴리오 페이지를 만들어보자!
 ```
+
+## 개발환경
+React 기반 Next.JS
+Tailwind CSS
