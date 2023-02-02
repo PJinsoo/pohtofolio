@@ -17,7 +17,7 @@ export default function Title ({title, summary, icon}: TitleProps) {
                 <span className="text-2xl p-1 border-b-2 border-gray-600 font-mono font-bold">{title}</span>          
             </div>
             {/* 한 줄 소개가 들어갈 부분 */}
-            <span className="font-bold text-slate-500 text-lg">{summary}</span>
+            <span className="font-bold text-slate-500 text-lg mt-2">{summary}</span>
         </div>
     )
 }

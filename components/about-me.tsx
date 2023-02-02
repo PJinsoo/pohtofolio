@@ -8,18 +8,21 @@ export default function AboutMe() {
     return (
         <div>
             {/* 메뉴 제목 컴포넌트 */}
-            <Title title="About Me" summary="summary" icon="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <Title
+                title="About Me"
+                summary="기록하고 회고하며 성장하는 개발자입니다."
+                icon="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 
             {/* 내 정보가 들어갈 공간 */}
             <div className="mt-4 grid sm:grid-cols-1 lg:grid-cols-2 space-y-2 lg:space-y-0">
-                {/* 내 사진자리 | 지금은 임시상태로 걍 흰 배경 */}
-                <Image src={''} alt="profileImg" objectFit="cover" objectPosition="center" width={300} height={350}
+                {/* 내 사진자리 | src지우면 임시 배경으로 */}
+                <Image src={profileImg} alt="profileImg" width={300} height={350}
                     className="bg-slate-300" />
 
                 {/* 텍스트 정보 */}
                 <div className="rounded-md xl:-ml-28 grid p-3">
                     {/* 간단한 자기소개 */}
-                    <p className="">intro</p>
+                    <p className="">자기소개가 들어갈 자리</p>
 
                     {/* 이름, 생년월일, 주소지, 연락처, 학력 등등 */}
                     <div className="mt-4 lg:mt-0 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 space-y-6 lg:space-y-0">
