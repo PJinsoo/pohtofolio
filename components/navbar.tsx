@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/link';
 import { Popover } from '@headlessui/react'
+import PageSize from "../utility/page-size";
 
 // 메뉴 컴포넌트
 
@@ -12,29 +13,8 @@ const Navbar = () => {
         { title: '메뉴3', href: '' },
     ]
 
-    // 화면 크기 감지
-    const [width, setWidth] = useState(
-        // window 객체는 Next.js의 SSR 과정에서 찾을 수 없기 때문에 typeof로 존재 판단 후 작업 수행
-        typeof window != 'undefined' ? window.innerWidth : 0)
-
-    // 화면 크기를 감지할 동안 걸어줄 로딩
-    const [isLoading, setLoading] = useState(true)
-    useEffect(() => {
-        width != undefined && setLoading(false)
-    }, [width])
-
-    // 화면 크기 저장
-    const screenResize = () => {
-        setWidth(window?.innerWidth)
-    }
-
-    // 페이지가 그려질 때 마다 화면 크기 다시 저장
-    useEffect(() => {
-        window.addEventListener("resize", screenResize)
-        return () => {
-            window.removeEventListener("resize", screenResize)
-        }
-    }, [])
+    // 현재 브라우저의 Width 값을 가져올 메서드
+    const pageSize = PageSize()
 
     // 모바일 메뉴 변수
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -46,14 +26,15 @@ const Navbar = () => {
 
     return (
         <div>
+            테스트용 현재 화면 크기 {pageSize}
             {/* width 값을 가져오는 동안 로딩을 걸어주어 에러방지 */}
-            {width > 640 && !isLoading
+            {pageSize > 640
                 // 일반적인 웹 브라우저 화면에서의 메뉴
                 ? (<div className="space-x-10">
                     {/* 메뉴 수 만큼 메뉴 출력 */}
                     {menus?.map((menu) => (
                         <Link href={menu.href}>
-                            <span className="text-sm font-semibold">
+                            <span className="text-sm font-semibold text-orange-500 hover:border-b-2 border-orange-500">
                                 {menu.title}
                             </span>
                         </Link>))}
