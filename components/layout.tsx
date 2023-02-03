@@ -5,15 +5,9 @@ import Header from "./header"
 // 레이아웃 컴포넌트
 
 interface LayoutProps {
-    hasHeader?: boolean;
-    hasFooter?: boolean;
     children: React.ReactNode;
 }
-export default function Layout({
-    hasHeader = true,
-    //hasFooter = true,
-    children
-}:LayoutProps){
+const Layout = ({ children }:LayoutProps) => {
     return(
         <div className="w-full h-full bg-neutral-50">
             <Head>
@@ -34,3 +28,5 @@ export default function Layout({
     )
     
 }
+
+export default Layout

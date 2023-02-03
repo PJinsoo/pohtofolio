@@ -1,12 +1,13 @@
 import AboutMe from "@/components/about-me";
 import Layout from "@/components/layout";
 import AboutMe_ver2 from "@/components/about-me-v2"; // 사진 없는 버전
+import Skills from "@/components/skills";
 
 // 포트폴리오 화면
 
 // 각 메뉴의 간편한 유지보수를 위해 컴포넌트화
 
-const Home = () => {
+const test = () => {
   return (
       <Layout>
         {/* 크기 조정용 */}
@@ -24,12 +25,10 @@ const Home = () => {
         </span>
 
         {/* 인적사항 소개 컴포넌트 */}
-        <AboutMe/>
-        <hr className="my-12" />
-
-
+        <AboutMe_ver2/>
+        <Skills/>
       </Layout>
   )
 }
 
-export default Home
+export default test
