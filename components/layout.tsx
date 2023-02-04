@@ -19,7 +19,7 @@ const Layout = ({ children }:LayoutProps) => {
 
             <Header/>
             
-            <div className="bg-neutral-50 px-28 md:px-52 mt-10">
+            <div className="bg-neutral-50 px-28 mt-10">
                 {children}
             </div>
             

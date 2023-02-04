@@ -28,6 +28,10 @@ const Skills = () => {
                 summary= "임시글" // "보유한 기술 스택입니다."
                 icon="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             
+            <div>
+                화면 크기 테스트용 {pageSize}
+            </div>
+
             {/* 기술스택 파트 */}
             <div className={`grid grid-cols-1 space-y-10 lg:space-y-4 lg:grid-cols-2`}>
                 {/* 프론트엔드 기술 스택 */}
@@ -53,7 +57,7 @@ const Skills = () => {
                 </div>
 
                 {/* 백엔드 기술 스택 */}
-                <div className="w-[300px] h-[400px] grid mt-4 p-2 border rounded-lg shadow-md space-y-6 bg-gray-50">
+                <div className="w-[300px] h-[600px] grid mt-4 p-2 border rounded-lg shadow-md space-y-6 bg-gray-50">
                     <span className="text-center text-2xl border-b-2 border-gray-300 m-2 font-bold text-orange-500">Backend</span>
                     <div className="flex justify-around space-x-2 -mr-2">
                         <Image src={JAVA} alt="profileImg" width={100} height={100}/>
@@ -61,6 +65,9 @@ const Skills = () => {
                     </div>
                     <div className="flex justify-around p-2">
                         <Image src={Spring} alt="profileImg" width={250} height={100} />
+                    </div>
+                    <div className="flex justify-around p-2">
+                        <Image src={MySQL} alt="profileImg" width={250} height={100} />
                     </div>
                 </div>
             </div>
