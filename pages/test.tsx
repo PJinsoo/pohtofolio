@@ -1,13 +1,17 @@
-import AboutMe from "@/components/about-me";
+import AboutMe from "@/backup/about-me";
 import Layout from "@/components/layout";
-import AboutMe_ver2 from "@/components/about-me-v2"; // 사진 없는 버전
-import Skills from "@/components/skills";
+import AboutMe_ver2 from "@/components/about-me"; // 사진 없는 버전
+import HeightSkills from "@/components/skills-height";
+import WidthSkills from "@/components/skills-width";
+import PageSize from "@/utility/page-size";
 
 // 포트폴리오 화면
 
 // 각 메뉴의 간편한 유지보수를 위해 컴포넌트화
 
 const test = () => {
+  const pageSize = PageSize()
+
   return (
       <Layout>
         {/* 크기 조정용 */}
@@ -26,7 +30,9 @@ const test = () => {
 
         {/* 인적사항 소개 컴포넌트 */}
         <AboutMe_ver2/>
-        <Skills/>
+        {pageSize >= 1300 ? <WidthSkills/> : <HeightSkills/>}
+        {/* <HeightSkills/>
+        <WidthSkills/> */}
       </Layout>
   )
 }
