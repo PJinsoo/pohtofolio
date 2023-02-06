@@ -7,7 +7,8 @@ const PageSize = () => {
     // 화면 크기 감지
     // window 객체는 Next.js의 SSR 과정에서 찾을 수 없기 때문에 typeof로 존재 판단 후 작업 수행
     const [width, setWidth] = useState(
-        typeof window != 'undefined' ? window.innerWidth : 0)
+        typeof window != 'undefined' ? window.innerWidth : 0
+        )
 
     // 화면 크기를 감지할 동안 걸어줄 로딩
     const [isLoading, setLoading] = useState(true)

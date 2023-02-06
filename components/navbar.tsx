@@ -27,7 +27,6 @@ const Navbar = () => {
     return (
         <div>
             {/* 테스트용 현재 화면 크기 {pageSize} */}
-            {/* width 값을 가져오는 동안 로딩을 걸어주어 에러방지 */}
             {pageSize > 640
                 // 일반적인 웹 브라우저 화면에서의 메뉴
                 ? (<div className="space-x-10">

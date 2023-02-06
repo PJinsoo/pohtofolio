@@ -106,7 +106,6 @@ const AboutMe = () => {
                     </div>
                 </div>
             </div>
-            <hr className="my-12 border border-gray-300" />
         </div>
     )
 }

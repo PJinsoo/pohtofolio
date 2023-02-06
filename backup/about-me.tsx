@@ -1,5 +1,4 @@
 import Image from "next/image";
-import profileImg from "../images/profileImg.jpg" // 프로필사진
 import Title from "../components/title";
 
 // About Me에 대한 컴포넌트

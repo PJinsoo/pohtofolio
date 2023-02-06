@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  // swiper 라이브러리 사용을 위해 false로 변경
+  reactStrictMode: false,
 }
 
 module.exports = nextConfig
