@@ -40,7 +40,7 @@ const Projects = () => {
 
                 {/* 영화소개 페이지 */}
                 <SwiperSlide>
-                    <ProjectTemplate img={testImg} title="영화소개 페이지" date="2022.09" front="Next.JS" back="Node.JS | TMDB(Open Source API)" github="ww">
+                    <ProjectTemplate img={testImg} title="영화소개 페이지" date="2022.09" front="Next.JS | TypeScript" back="Node.JS | TMDB(Open Source API)" github="ww">
                         <div>
                             <p>
                                 영화 정보를 확인할 수 있는 간단한 웹페이지 입니다.
@@ -64,7 +64,7 @@ const Projects = () => {
 
                 {/* 당근마켓 클론 */}
                 <SwiperSlide>
-                    <ProjectTemplate img={testImg} title="당근마켓 클론" date="2022.10" front="Next.JS" back="Node.JS | Prisma" github="https://github.com/PJinsoo/carrot-market">
+                    <ProjectTemplate img={testImg} title="당근마켓 클론" date="2022.10" front="Next.JS | TypeScript" back="Node.JS | Prisma" github="https://github.com/PJinsoo/carrot-market">
                         <div>
                             <p>
                                 당근마켓을 클론코딩 설명설명 대충 프리즈마 사용 nosql뭐시기저시기 이거 설명 제대로 못할거같으면 걍 mysql로 재구현하기

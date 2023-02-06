@@ -7,6 +7,7 @@
 ## 개발환경
 
 ```bash
+Type-Script
 React 기반 Next.JS
 Design: Tailwind CSS
 ```
