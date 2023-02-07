@@ -15,27 +15,26 @@ const AboutMe = () => {
             {/* 메뉴 제목 컴포넌트 */}
             <Title
                 title="About Me"
-                summary= "ㄱㄹㅎㄱ ㅎㄱㅎㅁ ㅅㅈㅎㄴ ㄱㅂㅈ" //"기록하고 회고하며 성장하는 개발자입니다."
+                summary= "기록하고 회고하며 성장하는 개발자입니다!"
                 icon="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
 
             {/* About Me 메뉴의 내용 */}
             <div className='mt-4 grid border rounded-lg shadow-md p-2 bg-gray-50'>
-                                
-                {/* 화면 크기가 작아지면 내 사진 노출하지 않기 */}
-                {/* {pageSize >= 550 && ( // 지금은 임시 사진 넣어둔 상태
-                    <div className="p-4 flex justify-center lg:justify-start">
-                        <Image src={profileImg} alt="profileImg" width={300} height={350}
-                        className="rounded-lg shadow-md" />
-                    </div>
-                )} */}
-
                 {/* 텍스트 정보 */}
                 <div className={`rounded-md px-4 py-10 xl:grid xl:grid-cols-2`}>
                     {/* 간단한 자기소개 */}
-                    <p className="xl:object-center xl:p-10">
-                        자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리 자기소개가 들어갈 자리
-                    </p>
+                    <div className="xl:object-center xl:p-10 font-medium">
+                        <p>
+                            떠오르는 아이디어를 바로바로 메모하고 추후 실제로 구현해보면서 개발에 흥미를 느끼곤 합니다.
+                        </p><br/>
+                        <p>
+                            회고를 습관화하여 좋았던 부분에선 무엇이 좋았는지 다시 생각해보며 자기긍정을 높이고 있으며,
+                        </p><br/>
+                        <p>
+                            부족했던 부분에선 부족했던 점을 다시 한 번 상기해보며 이를 보완하기 위해선 무엇을 해야하는지 생각해보곤 합니다.
+                        </p>
+                    </div>
                     {/* 이름, 생년월일, 주소지, 연락처, 학력 등등 */}
                     <div className="mt-8 grid grid-cols-1 space-y-6
                                     sm:grid-cols-2 sm:space-y-0

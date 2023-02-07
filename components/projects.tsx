@@ -39,7 +39,7 @@ const Projects = () => {
                 >
 
                     {/* 영화소개 페이지 */}
-                    <SwiperSlide>
+                    <SwiperSlide className="cursor-pointer">
                         <ProjectTemplate img={testImg} title="영화소개 페이지" date="2022.09" front="Next.JS | TypeScript" back="Node.JS | TMDB(Open Source API)" github="ww">
                             <div>
                                 <p>
@@ -62,7 +62,7 @@ const Projects = () => {
                     </SwiperSlide>
 
                     {/* 당근마켓 클론 */}
-                    <SwiperSlide>
+                    <SwiperSlide className="cursor-pointer">
                         <ProjectTemplate img={testImg} title="당근마켓 클론" date="2022.10" front="Next.JS | TypeScript" back="Node.JS | Prisma" github="https://github.com/PJinsoo/carrot-market">
                             <div>
                                 <p>
@@ -88,7 +88,7 @@ const Projects = () => {
                         </ProjectTemplate>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide className="cursor-pointer">
                         <ProjectTemplate img={testImg} title="DJMAX V 성과 기록기" date="2021.11" language="JAVA" DB="MySQL">
                             <div>
                                 <p>
