@@ -19,7 +19,7 @@ const AboutMe = () => {
             />
 
             {/* About Me 메뉴의 내용 */}
-            <div className={`${pageSize <= 550 && 'w-[300px]'}  mt-4 grid border rounded-lg shadow-md p-2 bg-gray-50`}>
+            <div className='mt-4 grid border rounded-lg shadow-md p-2 bg-gray-50'>
                                 
                 {/* 화면 크기가 작아지면 내 사진 노출하지 않기 */}
                 {/* {pageSize >= 550 && ( // 지금은 임시 사진 넣어둔 상태

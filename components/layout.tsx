@@ -1,3 +1,4 @@
+import PageSize from "@/utility/page-size";
 import Head from "next/head";
 import React, { Fragment } from "react";
 import Header from "./header"
@@ -7,9 +8,12 @@ import Header from "./header"
 interface LayoutProps {
     children: React.ReactNode;
 }
+
 const Layout = ({ children }:LayoutProps) => {
+    const pageSize =PageSize()
+
     return(
-        <div className="w-full h-full bg-neutral-50">
+        <div className={`w-full h-full bg-neutral-50`}>
             <Head>
                 {/* 웹 페이지 타이틀 */}
                 <title>JinSoo's Photofolio</title>
@@ -19,7 +23,10 @@ const Layout = ({ children }:LayoutProps) => {
 
             <Header/>
             
-            <div className="bg-neutral-50 px-28 mt-10">
+            {/* 페이지 사이즈에 따라 레이아웃 크기 조절 */}
+            <div className={`bg-neutral-50 mt-10 mx-10
+                    ${pageSize >= 500 && 'mx-28'}
+                `}>
                 {children}
             </div>
             

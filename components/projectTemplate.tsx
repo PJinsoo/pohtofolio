@@ -23,7 +23,7 @@ const ProjectTemplate = ({
     const pageSize = PageSize()
     
     return (
-        <div className={`${pageSize <= 550 ? 'w-[300px]' : 'w-auto'} h-auto mt-4 mx-20 mb-10 grid border rounded-lg shadow-md p-4 bg-gray-50`}>
+        <div className='w-auto h-auto mt-4 mb-10 grid border rounded-lg shadow-md p-4 bg-gray-50'>
             <span className="text-center text-2xl font-bold mt-4">{title}</span>
             <span className="text-center text-xm text-gray-500 mb-4">{date}</span>
                 <div className={`${pageSize >= 1000 ? 'grid grid-cols-2 space-x-4' : 'space-y-4'}`}>

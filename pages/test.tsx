@@ -4,6 +4,8 @@ import AboutMe_ver2 from "@/components/about-me"; // 사진 없는 버전
 import HeightSkills from "@/components/skills-height";
 import WidthSkills from "@/components/skills-width";
 import PageSize from "@/utility/page-size";
+import Projects from "@/components/projects";
+import ChatButton from "@/components/chat-button";
 
 // 포트폴리오 화면
 
@@ -31,8 +33,6 @@ const test = () => {
         {/* 인적사항 소개 컴포넌트 */}
         <AboutMe_ver2/>
         {pageSize >= 1300 ? <WidthSkills/> : <HeightSkills/>}
-        {/* <HeightSkills/>
-        <WidthSkills/> */}
       </Layout>
   )
 }

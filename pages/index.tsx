@@ -4,10 +4,7 @@ import HeightSkills from "@/components/skills-height";
 import WidthSkills from "@/components/skills-width";
 import PageSize from "@/utility/page-size";
 import Projects from "@/components/projects";
-import { useState } from "react";
-import SwiperLib from "@/components/swiper";
 import DivideLine from "@/components/divide-line";
-import { Dialog, Transition } from "@headlessui/react";
 import ChatButton from "@/components/chat-button";
 
 // 포트폴리오 화면
@@ -17,13 +14,26 @@ import ChatButton from "@/components/chat-button";
 const Home = () => {
   const pageSize = PageSize()
 
-  const [sideTrigger, setSideTrigger] = useState(false)
-  const viewSideModal = () => {
-    return setSideTrigger(!sideTrigger)
-  }
-
   return (
       <Layout>
+        {/* 화면사이즈 테스트용 */}
+        <div className="fixed bg-gray-200">
+        <p
+            className="
+                text-white
+                font-bold
+                bg-red-500
+                sm:bg-yellow-500
+                md:bg-green-500
+                lg:bg-blue-500
+                xl:bg-violet-500
+                ">
+            빨:xs 주:sm 초:md 파:lg 보:xl
+        </p>
+        <p>현재 사이즈: {pageSize}</p>
+        </div>
+
+
         {/* 인적사항 소개 화면 */}
         <AboutMe/>
         <DivideLine/>

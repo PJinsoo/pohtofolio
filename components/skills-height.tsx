@@ -38,7 +38,7 @@ const HeightSkills = () => {
                             ${pageSize >= 850 && 'grid-cols-2'}
             `}>
                 {/* 프론트엔드 기술 스택 */}
-                <div className="w-[300px] grid mt-4 p-2 border rounded-lg shadow-md space-y-6 bg-gray-50">
+                <div className={`${pageSize >= 850 && ' w-[300px]'} grid mt-4 p-2 border rounded-lg shadow-md space-y-6 bg-gray-50`}>
                     <span className="text-center text-2xl border-b-2 h-10 border-gray-300 m-2 font-bold text-orange-500">Frontend</span>
                     <div className="flex justify-around">
                         <Image src={HTML} alt="html" width={130} height={130} className="-ml-3"/>
@@ -61,7 +61,7 @@ const HeightSkills = () => {
 
                 <div>
                 {/* 백엔드 기술 스택 */}
-                <div className="w-[300px] h-[600px] grid mt-4 p-2 border rounded-lg shadow-md space-y-6 bg-gray-50">
+                <div className={`${pageSize >= 850 && ' w-[300px]'} h-[600px] grid mt-4 p-2 border rounded-lg shadow-md space-y-6 bg-gray-50`}>
                     <span className="text-center text-2xl border-b-2 border-gray-300 m-2 font-bold text-orange-500">Backend</span>
                     <div className="flex justify-around space-x-2 -mr-4">
                         <Image src={JAVA} alt="java" width={80} height={80}/>
@@ -75,7 +75,7 @@ const HeightSkills = () => {
                     </div>
                 </div>
                 {/* ect... */}
-                <div className="w-[300px] mt-4 p-4 grid grid-cols-1 border rounded-lg shadow-md space-y-6 bg-gray-50">
+                <div className={`${pageSize >= 850 && ' w-[300px]'} mt-4 p-4 grid grid-cols-1 border rounded-lg shadow-md space-y-6 bg-gray-50`}>
                     <span className="text-center text-2xl border-b-2 border-gray-300 m-2 font-bold text-orange-500">etc.</span>
                     <div className="flex justify-around space-x-2 -mr-2">
                         <Image src={Git} alt="git" width={200} height={100} />

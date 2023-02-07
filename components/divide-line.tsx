@@ -5,7 +5,7 @@ import PageSize from "@/utility/page-size"
 const DivideLine = () => {
     const pageSize = PageSize()
     
-    return <hr className={`${pageSize <= 500 && '-mr-10' } my-12 border border-gray-300`} />
+    return <hr className='my-12 border border-gray-300'/>
 }
 
 export default DivideLine
