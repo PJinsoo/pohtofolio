@@ -6,6 +6,8 @@ import PageSize from "@/utility/page-size";
 import Projects from "@/components/projects";
 import DivideLine from "@/components/divide-line";
 import ChatButton from "@/components/chat-button";
+import Certificate from "@/components/certificate";
+import Career from "@/components/career";
 
 // 포트폴리오 화면
 
@@ -36,13 +38,18 @@ const Home = () => {
 
         {/* 인적사항 소개 화면 */}
         <AboutMe/>
-        <DivideLine/>
+
         {/* 페이지 사이즈에 따라 다르게 보여줄 기술스택 화면 */}
         {pageSize >= 1300 ? <WidthSkills/> : <HeightSkills/>}
-        <DivideLine/>
+
+        {/* 취득 자격증 */}
+        <Certificate/>
+
+        {/* 경력 소개 화면 */}
+        <Career/>
+
         {/* 프로젝트 소개 화면 */}
         <Projects/>
-        <DivideLine/>
 
         {/* 우하단 챗버튼 */}
         <ChatButton/>

@@ -19,6 +19,7 @@ import Gitlab from "../images/ect-icon/gitlab.png"
 import Title from "./title";
 import Image from "next/image";
 import PageSize from "@/utility/page-size";
+import DivideLine from "./divide-line"
 
 // 가로로 나열하는 기술스택
 
@@ -71,6 +72,7 @@ const WidthSkills = () => {
                 </div>
                 </div>
             </div>
+            <DivideLine/>
         </>
     )
 }

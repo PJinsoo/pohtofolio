@@ -7,6 +7,7 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'
+import DivideLine from "./divide-line";
 
 // 프로젝트 메뉴
 
@@ -95,7 +96,7 @@ const Projects = () => {
                                     초기엔 로그인화면을, 로그인한 회원이 기록한 성과 목록을, 성과기록을 추가/삭제/수정을 지원하는 기본적인 기록기 프로그램입니다.
                                 </p><br/>
                                 <p>
-                                    <b>자바의 Window Apllication을 통해 자바 GUI로 개발</b>되었으며, 유저정보, 성과정보를 저장할 <b>데이터베이스로는 MySQL</b>이 사용되었습니다.
+                                    <b>자바의 Window Apllication을 통해 자바 GUI로 개발</b>되었으며, 유저정보, 성과정보를 저장할 <b>데이터베이스로는 MySQL</b>을 사용했습니다.
                                 </p><br/>
                                 <p>
                                     그동안 자바로 구현해본 코드는 CLI 화면에서 텍스트만을 바라보는 것에서 지루함을 느꼈습니다. 
@@ -111,6 +112,7 @@ const Projects = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
+            <DivideLine/>
         </div>
     )
 }
