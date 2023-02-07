@@ -36,12 +36,12 @@ const Career = () => {
                         <span className="text-xl font-bold text-gray-800 -mx-10">(주) 디벨룹</span>
                         <span className="text-sm text-gray-600">2022.09 ~ 현재 재직중</span>
                     </div>
-                    <hr className="my-4 w-full border-gray-500"/>
+                    <hr className="my-4 w-full border-gray-300"/>
                     <div className="flex flex-col items-center">
-                        <span className="text-lg font-bold">:: 주요 업무 ::</span>
-                        <p className="font-semibold">Spring 웹을 Next.JS로 재개발</p>
+                        <span className="text-lg font-bold text-gray-700">:: 주요 업무 ::</span>
+                        <p className="font-semibold text-gray-700">Spring 웹을 Next.JS로 재개발</p>
                     </div>
-                    <hr className="my-4 w-full border-gray-500"/>
+                    <hr className="my-4 w-full border-gray-300"/>
                     {/* 경력 내용 상세보기 온오프 */}
                     <div className="w-full">
                         {intro 
@@ -53,7 +53,7 @@ const Career = () => {
                                     내용닫기
                                 </span>
                                 </div>
-                                <div className="mt-2 p-1">
+                                <div className="mt-2 p-1 text-gray-800">
                                     <p>
                                         Spring MVC로 개발되어 운영 중인 웹 페이지인 하키플레이를 Next.JS로 변경하는 프로젝트에 참여하였습니다.
                                     </p><br/>
@@ -80,7 +80,7 @@ const Career = () => {
                                 </span>
                             </div>
                         )}
-                        <hr className="my-4 border-gray-500"/>
+                        <hr className="my-4 border-gray-300"/>
                         <div>
                             <span className="p-2 font-semibold">▎개발 담당 업무</span>
                             <div className="ml-2 mt-1">

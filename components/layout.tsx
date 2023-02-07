@@ -1,6 +1,7 @@
 import PageSize from "@/utility/page-size";
 import Head from "next/head";
 import React, { Fragment } from "react";
+import Footer from "./footer";
 import Header from "./header"
 
 // 레이아웃 컴포넌트
@@ -30,7 +31,7 @@ const Layout = ({ children }:LayoutProps) => {
                 {children}
             </div>
             
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     )
     
