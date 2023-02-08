@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import AboutMe from "@/components/about-me"; // 사진 없는 버전
+import AboutMe from "@/components/about-me";
 import HeightSkills from "@/components/skills-height";
 import WidthSkills from "@/components/skills-width";
 import PageSize from "@/utility/page-size";
@@ -19,7 +19,7 @@ const Home = () => {
   return (
       <Layout>
         {/* 화면사이즈 테스트용 */}
-        {/* <div className="fixed bg-gray-200">
+        <div className="fixed bg-gray-200 top-0">
         <p
             className="
                 text-white
@@ -33,7 +33,7 @@ const Home = () => {
             빨:xs 주:sm 초:md 파:lg 보:xl
         </p>
         <p>현재 사이즈: {pageSize}</p>
-        </div> */}
+        </div>
 
 
         {/* 인적사항 소개 화면 */}
