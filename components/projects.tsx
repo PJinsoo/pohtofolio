@@ -40,7 +40,7 @@ const Projects = () => {
 
                     {/* 영화소개 페이지 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate img={testImg} title="영화소개 페이지" date="2022.09" front="Next.JS | TypeScript" back="Node.JS | TMDB(Open Source API)" github="ww">
+                        <ProjectTemplate no={1} img={testImg} title="영화소개 페이지" date="2022.09" front="Next.JS | TypeScript" back="Node.JS | TMDB(Open Source API)" github="ww">
                             <div>
                                 <p>
                                     <b>영화 정보를 확인할 수 있는 간단한 웹페이지 프로젝트 입니다.</b> 최근 개봉한 영화 중 평점이 높은 순으로 정렬하여 목록을 보여주며
@@ -63,7 +63,7 @@ const Projects = () => {
 
                     {/* 당근마켓 클론 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate img={testImg} title="당근마켓 클론" date="2022.10" front="Next.JS | TypeScript" back="Node.JS | Prisma" github="https://github.com/PJinsoo/carrot-market">
+                        <ProjectTemplate no={2} img={testImg} title="당근마켓 클론" date="2022.10" front="Next.JS | TypeScript" back="Node.JS | Prisma" github="https://github.com/PJinsoo/carrot-market">
                             <div>
                                 <p>
                                     <b>모바일 중고거래 앱인 당근마켓을 웹으로 클론 코딩해보았습니다.</b> 판매 상품 목록을 보여주며 상품을 클릭하면 상품 정보와
@@ -89,7 +89,7 @@ const Projects = () => {
                     </SwiperSlide>
 
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate img={testImg} title="DJMAX V 성과 기록기" date="2021.11" language="JAVA" DB="MySQL">
+                        <ProjectTemplate no={3} img={testImg} title="DJMAX V 성과 기록기" date="2021.11" language="JAVA" DB="MySQL">
                             <div>
                                 <p>
                                     즐겨하는 <b>리듬게임인 &apos;DJMAX&apos;의 성과를 기록하는 자바 프로그램을 개발해본 프로젝트입니다.</b> 대학 시절 학과 자바 수업의 프로젝트로 진행되었습니다.

@@ -36,10 +36,15 @@ const Career = () => {
                         <span className="text-xl font-bold text-gray-800 -mx-10">(주) 디벨룹</span>
                         <span className="text-sm text-gray-600">2022.09 ~ 현재 재직중</span>
                     </div>
+                    <div className="flex flex-col items-center">
+                        <p className="text-gray-700">
+                            비대면 화상 솔루션과 스마트팩토리를 개발·운영하고 스포츠 경기 운영·관리 플랫폼의 개발 등 기타 Web/App 플랫폼 개발을 하는 기업입니다.
+                        </p>
+                    </div>
                     <hr className="my-4 w-full border-gray-300"/>
                     <div className="flex flex-col items-center">
-                        <span className="text-lg font-bold text-gray-700">:: 주요 업무 ::</span>
-                        <p className="font-semibold text-gray-700">Spring 웹을 Next.JS로 재개발</p>
+                        <span className="text-lg font-bold text-gray-700">:: 주요 담당 업무 ::</span>
+                        <p className="font-semibold text-gray-700">스포츠 경기 운영·관리 플랫폼 개발</p>
                     </div>
                     <hr className="my-4 w-full border-gray-300"/>
                     {/* 경력 내용 상세보기 온오프 */}
@@ -55,19 +60,16 @@ const Career = () => {
                                 </div>
                                 <div className="mt-2 p-1 text-gray-800">
                                     <p>
-                                        <b>Spring MVC로 개발되어 운영 중인 웹 페이지인 하키플레이를 Next.JS로 변경하는 프로젝트에 참여하였습니다.</b>
+                                        <b>Spring MVC로 개발되어 운영 중인 웹 사이트 &apos;하키플레이(아이스하키 경기 운영·관리 웹 플랫폼)&apos;를 
+                                            React.JS 기반 프레임워크인 Next.JS로 재개발하는 프로젝트에 참여하였습니다.</b>
                                     </p><br/>
                                     <p>
-                                        해당 프로젝트를 수행하기 위해서 React와 Next를 1달의 기간을 거쳐 학습하였습니다.
-                                        학습의 효과로 Next.JS 환경에 빠르게 적응할 수 있었으며 하키플레이의 Next 변환 작업도 순조롭게 진행하였습니다.
+                                        해당 프로젝트를 수행하기 위해서 React.JS와 Next.JS를 1달의 기간을 거쳐 학습하였습니다.
+                                        학습의 효과로 Next.JS 환경에 빠르게 적응할 수 있었으며 <b>하키플레이의 Next.JS 재개발 작업에서도 대부분의 페이지를 구현해내는 실적을 올릴 수 있었습니다.</b>
                                     </p><br/>
                                     <p>
-                                        이 프로젝트를 진행하며 <b>React(Next)의 실력 향상</b>은 물론, 기존 하키플레이의 구조를 파악해가며 <b>Spring의 실력까지</b> 향상할 시킬 수 있었습니다.
-                                    </p><br/>
-                                    <p>
-                                        또한 학생 수준에서 벗어나 <b>실무 코드가 어떠한지 몸소 느낄 수 있었고,</b> 막히는 부분에선 사수의 가르침과 조언을 통해 전화위복의 기회를 얻을 수 있었습니다.
+                                        더불어 기존의 Spring으로 개발된 하키플레이의 구조를 확인해가며 작업을 진행한 만큼 게시판 제작 수준에 국한되던 <b>제 Spring 실력을 실제 운영 중인 하나의 웹페이지를 이해할 만큼 성장시킬 수 있었습니다.</b>
                                     </p>
-                                    
                                 </div>
                             </div>
                             ) 
@@ -81,7 +83,7 @@ const Career = () => {
                         )}
                         <hr className="my-4 border-gray-300"/>
                         <div>
-                            <span className="p-2 font-semibold">▎개발 담당 업무</span>
+                            <span className="p-2 font-semibold">▎&nbsp;개발 담당 업무</span>
                             <div className="ml-2 mt-1">
                                 <p>· 게시판의 CRUD 개발</p>
                                 <p>· 게시글 뷰어에 Youtube 랜더링 적용</p>
@@ -90,7 +92,7 @@ const Career = () => {
                                 <p>· API 개발 - 회원 탈퇴, 팀 정보수정/폐쇄신청</p>
                                 <p>· 관리자의 회원, 팀 관리 페이지 개발</p>
                                 <p>· Text Editor로 CKeditor 라이브러리 적용</p>
-                                <p>· FullCalendar 라이브러리 적용</p>
+                                <p>· 경기 일정 관리을 위해 FullCalendar 라이브러리 적용</p>
                             </div>
                         </div>
                     </div>

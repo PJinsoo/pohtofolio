@@ -51,8 +51,8 @@ const Home = () => {
         {/* 프로젝트 소개 화면 */}
         <Projects/>
 
-        {/* 우하단 챗버튼 */}
-        <ChatButton/>
+        {/* 우하단 챗버튼, 당장은 일단 주석처리*/}
+        {/* <ChatButton/> */}
       </Layout>
   )
 }
