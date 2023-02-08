@@ -17,7 +17,7 @@ const Layout = ({ children }:LayoutProps) => {
         <div className={`w-full h-full bg-neutral-50`}>
             <Head>
                 {/* 웹 페이지 타이틀 */}
-                <title>JinSoo&apos;s Photofolio</title>
+                <title>JinSoo&apos;s Portfolio</title>
                 {/* 웹 페이지 아이콘 */}
                 <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
