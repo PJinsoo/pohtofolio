@@ -19,7 +19,7 @@ const Home = () => {
   return (
       <Layout>
         {/* 화면사이즈 테스트용 */}
-        <div className="fixed bg-gray-200 top-0">
+        {/* <div className="fixed bg-gray-200 top-0">
         <p
             className="
                 text-white
@@ -33,7 +33,7 @@ const Home = () => {
             빨:xs 주:sm 초:md 파:lg 보:xl
         </p>
         <p>현재 사이즈: {pageSize}</p>
-        </div>
+        </div> */}
 
 
         {/* 인적사항 소개 화면 */}

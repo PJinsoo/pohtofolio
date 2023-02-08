@@ -47,6 +47,20 @@ const Career = () => {
                         <p className="font-semibold text-gray-700">스포츠 경기 운영·관리 플랫폼 개발</p>
                     </div>
                     <hr className="my-4 w-full border-gray-300"/>
+                        <div>
+                            <span className="p-2 font-semibold">▎&nbsp;개발 담당 업무</span>
+                            <div className="ml-2 mt-1">
+                                <p>· 게시판의 CRUD 개발</p>
+                                <p>· 게시글 뷰어에 Youtube 랜더링 적용</p>
+                                <p>· 매치 정보 모달의 프론트 개발</p>
+                                <p>· 팀 페이지 전체 개발</p>
+                                <p>· API 개발 - 회원 탈퇴, 팀 정보수정/폐쇄신청</p>
+                                <p>· 관리자의 회원, 팀 관리 페이지 개발</p>
+                                <p>· Text Editor로 CKeditor 라이브러리 적용</p>
+                                <p>· 경기 일정 관리을 위해 FullCalendar 라이브러리 적용</p>
+                            </div>
+                        </div>
+                    <hr className="my-4 border-gray-300"/>
                     {/* 경력 내용 상세보기 온오프 */}
                     <div className="w-full">
                         {intro 
@@ -81,20 +95,6 @@ const Career = () => {
                                 </span>
                             </div>
                         )}
-                        <hr className="my-4 border-gray-300"/>
-                        <div>
-                            <span className="p-2 font-semibold">▎&nbsp;개발 담당 업무</span>
-                            <div className="ml-2 mt-1">
-                                <p>· 게시판의 CRUD 개발</p>
-                                <p>· 게시글 뷰어에 Youtube 랜더링 적용</p>
-                                <p>· 매치 정보 모달의 프론트 개발</p>
-                                <p>· 팀 페이지 전체 개발</p>
-                                <p>· API 개발 - 회원 탈퇴, 팀 정보수정/폐쇄신청</p>
-                                <p>· 관리자의 회원, 팀 관리 페이지 개발</p>
-                                <p>· Text Editor로 CKeditor 라이브러리 적용</p>
-                                <p>· 경기 일정 관리을 위해 FullCalendar 라이브러리 적용</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
