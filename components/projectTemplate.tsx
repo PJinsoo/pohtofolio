@@ -1,12 +1,22 @@
 import PageSize from "@/utility/page-size"
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+//당근마켓 이미지
+import CarrotEnter from "../images/project-img/carrot/0-enter.png"
+import CarrotHome from "../images/project-img/carrot/1-home.png"
+import CarrotProduct from "../images/project-img/carrot/2-product.png"
+import CarrotSale from "../images/project-img/carrot/3-sale.png"
+// 디맥 이미지
+import DjmaxMain from "../images/project-img/djmax/main.jpeg"
+import DjmaxInsert from "../images/project-img/djmax/insert.jpeg"
 
 // 프로젝트 소개는 계속 반복되는 코드기 때문에 컴포넌트로 분리
 
 interface ProjectProps {
     no: number,         // 프로젝트 번호
-    img: any,           // 프로젝트 이미지
+    projectImg?: any,          // 프로젝트 이미지
+    imgClick?: boolean,     // 이미지가 많을 경우 이미지들 배열로 담아서 선언   
     title: string,      // 프로젝트 제목
     date: string,       // 진행 날짜
     language?: string,  // 웹 개발물이 아닐 경우 사용
@@ -19,10 +29,56 @@ interface ProjectProps {
 }
 
 const ProjectTemplate = ({
-    no, img, title, date, language, DB, front, back, github, children
+    no, projectImg, imgClick, title, date, language, DB, front, back, github, children
 } : ProjectProps) => {
     const pageSize = PageSize()
-    
+
+    // 프로젝트 이미지 저장하기(스위퍼를 위해)
+    const [img, setImg] = useState(projectImg)
+    // 스위퍼
+    const [swiper, setSwiper] = useState(1)
+
+    // 클릭 시 다른 이미지로 전환
+    const onClick = (e:any) => {
+        // 클릭한 프로젝트의 넘버 가져오기
+        const {id} = e.target
+        // 프로젝트가 당근마켓
+        if(id == "2") {
+            if(swiper == 1) {
+                setSwiper(swiper+1)
+                return setImg(CarrotHome)
+            }
+            if(swiper == 2) {
+                setSwiper(swiper+1)
+                return setImg(CarrotProduct)
+            }
+            if(swiper == 3) {
+                setSwiper(swiper+1)
+                return setImg(CarrotSale)
+            }
+            if(swiper == 4) {
+                setSwiper(1)
+                return setImg(CarrotEnter)
+            }
+        }
+        if(id == "6") {
+            if(swiper == 1) {
+                setSwiper(swiper+1)
+                return setImg(DjmaxMain)
+            }
+            if(swiper == 2) {
+                setSwiper(1)
+                return setImg(DjmaxInsert)
+            }
+        }
+    }
+
+    const imgList = (img:any) => {
+        return (
+            <Image src={img} id={no.toString()} alt='projectimg' width={450} height={100} onClick={onClick} className="shadow-lg rounded-lg border p-1 cursor-pointer"/>
+        )
+    }
+
     return (
         <div className='w-auto h-auto mt-4 mb-10 grid border rounded-lg shadow-md p-4 bg-gray-50'>
             {/* 프로젝트 넘버링 */}
@@ -35,7 +91,15 @@ const ProjectTemplate = ({
             <div className={`${pageSize >= 1000 ? 'grid grid-cols-2 space-x-4' : 'space-y-4'}`}>
                 {/* 프로젝트 사진 */}
                 <div className='flex justify-center'>
-                    <Image src={img} alt='projectimg' width={1000} height={100}/>
+                    <>
+                    {imgClick && (
+                        <div>
+                            {imgList(img)}
+                            <span className="font-semibold text-sm text-gray-500 flex justify-end mt-1">이미지를 클릭하면 다른 이미지도 볼 수 있어요!</span>
+                        </div>
+                        )}
+                    {!imgClick && (<Image src={img} id={no.toString()} alt='projectimg' width={450} height={100} onClick={onClick} className="shadow-lg rounded-lg border p-1 cursor-pointer"/>)}
+                    </>
                 </div>
                 <div className="mt-4 text-gray-700">
                     {/* 설명 */}
