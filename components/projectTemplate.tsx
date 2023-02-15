@@ -42,7 +42,7 @@ const ProjectTemplate = ({
     const onClick = (e:any) => {
         // 클릭한 프로젝트의 넘버 가져오기
         const {id} = e.target
-        // 프로젝트가 당근마켓
+        // 프로젝트 당근마켓
         if(id == "2") {
             if(swiper == 1) {
                 setSwiper(swiper+1)
@@ -61,6 +61,7 @@ const ProjectTemplate = ({
                 return setImg(CarrotEnter)
             }
         }
+        //프로젝트 디맥
         if(id == "6") {
             if(swiper == 1) {
                 setSwiper(swiper+1)
@@ -75,7 +76,7 @@ const ProjectTemplate = ({
 
     const imgList = (img:any) => {
         return (
-            <Image src={img} id={no.toString()} alt='projectimg' width={450} height={100} onClick={onClick} className="shadow-lg rounded-lg border p-1 cursor-pointer"/>
+            <Image src={img} id={no.toString()} alt='projectimg' width={450} height={100} onClick={onClick} className="z-50 shadow-lg rounded-lg border p-1 cursor-pointer"/>
         )
     }
 
