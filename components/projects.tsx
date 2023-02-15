@@ -14,6 +14,7 @@ import CarrotEnter from "../images/project-img/carrot/0-enter.png"
 import Zoom from "../images/project-img/zoom/call.png"
 import DJMAX from "../images/project-img/djmax/main.jpeg"
 import Coin from "../images/project-img/coin/main.png"
+import Board from "../images/project-img/board/main.png"
 
 const Projects = () => {
     const pageSize = PageSize()
@@ -113,14 +114,14 @@ const Projects = () => {
 
                     {/* 게시판 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={4} projectImg={testImg} title="각종 게시판 구현" date="2021.09 ~" DB="MySQL" github="https://github.com/stars/PJinsoo/lists/board">
+                        <ProjectTemplate no={4} projectImg={Board} title="각종 게시판 구현" date="2021.09 ~" DB="MySQL" github="https://github.com/stars/PJinsoo/lists/board">
                             <div>
                                 <p>
                                     <b>여러가지 언어로 구현해본 게시판들입니다.</b> 새로운 언어를 학습함에 있어 튜토리얼로 게시판을 구현해보곤 합니다.
                                 </p><br/>
                                 <p>
-                                    <b>게시판을 구현을 통해</b> 해당 언어의 환경은 어떠하고, DataBase와의 커넥션은 어떻게 진행되는지, 연결된 DataBase에서 CRUD 작업은 어떻게 진행해야 하는지 등의 
-                                    <b>웹개발의 기초를 가장 효과적으로 익힐 수 있다 생각했습니다.</b>
+                                    <b>게시판을 구현을 통해</b> 해당 언어의 환경은 어떠하고, DataBase와의 커넥션은 어떻게 진행되는지, 
+                                    연결된 DataBase에서 CRUD 작업은 어떻게 진행해야 하는지 등의 <b>웹개발의 기초를 가장 효과적으로 익힐 수 있다 생각했습니다.</b>
                                 </p><br/>
                                 <p>
                                     이렇게 학습을 진행해본 언어로는 <b>Servlet-JSP, Spring, Spring Boot, Next.JS</b>가 해당됩니다.
@@ -135,6 +136,9 @@ const Projects = () => {
                             <div>
                                 <p>
                                     입력한 달러를 현재 코인의 시세로 변환시켜주거나 그 반대를 수행하는 코인 환전기입니다.
+                                </p><br/>
+                                <p>
+                                    React.JS 학습을 위해 진행해본 프로젝트로 React.JS 환경을 익히는데 큰 도움을 주었습니다.
                                 </p>
                             </div>
                         </ProjectTemplate>
@@ -142,7 +146,7 @@ const Projects = () => {
                     
                     {/* 디맥 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={6} projectImg={DJMAX} imgClick title="DJMAX V 성과 기록기" date="2021.11" language="JAVA" DB="MySQL">
+                        <ProjectTemplate no={5} projectImg={DJMAX} imgClick title="DJMAX V 성과 기록기" date="2021.11" language="JAVA" DB="MySQL">
                             <div>
                                 <p>
                                     즐겨하는 <b>리듬게임인 &apos;DJMAX&apos;의 성과를 기록하는 자바 프로그램을 개발해본 프로젝트입니다.</b> 대학 시절 학과 자바 수업의 프로젝트로 진행되었습니다.

@@ -62,7 +62,7 @@ const ProjectTemplate = ({
             }
         }
         //프로젝트 디맥
-        if(id == "6") {
+        if(id == "5") {
             if(swiper == 1) {
                 setSwiper(swiper+1)
                 return setImg(DjmaxMain)
