@@ -43,7 +43,7 @@ const ProjectTemplate = ({
         // 클릭한 프로젝트의 넘버 가져오기
         const {id} = e.target
         // 프로젝트 당근마켓
-        if(id == "2") {
+        if(id == "3") {
             if(swiper == 1) {
                 setSwiper(swiper+1)
                 return setImg(CarrotHome)
@@ -62,7 +62,7 @@ const ProjectTemplate = ({
             }
         }
         //프로젝트 디맥
-        if(id == "5") {
+        if(id == "6") {
             if(swiper == 1) {
                 setSwiper(swiper+1)
                 return setImg(DjmaxMain)

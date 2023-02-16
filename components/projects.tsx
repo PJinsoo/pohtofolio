@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation'
 import DivideLine from "./divide-line";
 // 프로젝트 이미지
+import PortfolioImg from "../images/project-img/portfolio/main.jpg"
 import MoiveChartImg from "../images/project-img/movie/main.png"
 import CarrotEnter from "../images/project-img/carrot/0-enter.png"
 import Zoom from "../images/project-img/zoom/call.png"
@@ -42,16 +43,42 @@ const Projects = () => {
                     allowTouchMove // 터치 허용
                     threshold={20} // 터치 감도
                 >
+                    {/* 포폴 */}
+                    <SwiperSlide className="cursor-pointer">
+                        <ProjectTemplate no={1} projectImg={PortfolioImg} title="JinSoo's Portfolio" date="2023.02" front="Next.JS | TypeScript" github="https://github.com/PJinsoo/portfolio">
+                            <div>
+                                <p>
+                                    <b>지금 보고 계시는 포트폴리오 프로젝트입니다!</b> 그동안 익힌 스킬을 하나의 결과물로 만들어보고 싶어 시작한 프로젝트입니다.
+                                </p><br/>
+                                <p>
+                                    <b>TypeScript와 Next.JS를 사용하여 구현했습니다.</b> 디자인은 Tailwind CSS를, 서버 배포는 Vercel을 이용해 배포 중입니다.
+                                </p><br/>
+                                <p>
+                                    <b>화면 크기에 따라 레이아웃 구조가 다르게 보일 반응형 웹으로 구현하였습니다.</b> 모바일 화면과 PC브라우저 화면에서 다르게 보일 것 입니다!
+                                </p><br/>
+                                <p>
+                                    이렇게 프로젝트를 진행하며 <b>그동안 쌓은 React.JS의 실력을 다듬을 수 있었습니다.</b> 앞으로의 제 커리어를 
+                                    계속 갱신할 예정이기 때문에 <b>최대한 간편한 유지보수를 위해 컴포넌트를 최대로 나누었고</b>, 이 과정에서 모듈화를 체험해볼 수 있었습니다.
+                                </p><br/>
+                                <p>
+                                    서버 배포까지 도전해본건 처음인 프로젝트로 Vercel을 통한 배포가 그렇게 어렵지 않고 간단하게 진행할 수 있다는 걸 알게 되었습니다.
+                                </p>
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </ProjectTemplate>
+                    </SwiperSlide>
 
                     {/* Moive Chart */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={1} projectImg={MoiveChartImg} title="Movie Chart" date="2022.09" front="Next.JS | TypeScript" back="Node.JS | TMDB(Open Source API)" github="https://github.com/PJinsoo/movie-chart">
+                        <ProjectTemplate no={2} projectImg={MoiveChartImg} title="Movie Chart" date="2022.09" front="Next.JS | JavaScript" back="Node.JS | TMDB(Open Source API)" github="https://github.com/PJinsoo/movie-chart">
                             <div>
                                 <p>
                                     <b>최신 영화를 인기순으로 확인할 수 있는 간단한 웹페이지 프로젝트 입니다.</b> 최근 개봉한 영화 중 평점이 높은 순으로 정렬하여 목록을 보여주며 줍니다.
                                 </p><br/>
                                 <p>
-                                    <b>TypeScript와 Next.JS</b>를 사용해 구현하였으며 Next.JS 프레임워크 사용은 첫 번째인 프로젝트입니다.
+                                    <b>JavaScript와 Next.JS</b>를 사용해 구현하였으며 Next.JS 프레임워크 사용은 첫 번째인 프로젝트입니다.
                                 </p>
                                 <p>
                                     영화 데이터의 경우, 오픈소스 사용에 더 익숙해질 수 있도록 <b>오픈소스 API인 TMDB의 데이터를 적극 활용</b>하였습니다.
@@ -67,7 +94,7 @@ const Projects = () => {
 
                     {/* 당근마켓 클론 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={2} projectImg={CarrotEnter} imgClick title="당근마켓 클론" date="2022.10" front="Next.JS | TypeScript" back="Node.JS | Prisma" github="https://github.com/PJinsoo/carrot-market">
+                        <ProjectTemplate no={3} projectImg={CarrotEnter} imgClick title="진수의 당근" date="2022.10" front="Next.JS | TypeScript" back="Node.JS | Prisma" github="https://github.com/PJinsoo/carrot-market">
                             <div>
                                 <p>
                                     <b>모바일 중고거래 앱인 당근마켓을 웹으로 클론 코딩해보았습니다.</b> 판매 상품 목록을 보여주며 상품을 클릭하면 상품 정보와
@@ -94,7 +121,7 @@ const Projects = () => {
 
                     {/* 줌 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={3} projectImg={Zoom} title="소켓의 영상통화방" date="2022.09" front="JavaScript" back="NodeJS" github="https://github.com/PJinsoo/zoom">
+                        <ProjectTemplate no={4} projectImg={Zoom} title="소켓의 영상통화방" date="2022.09" front="JavaScript" back="Node.JS" github="https://github.com/PJinsoo/zoom">
                             <div>
                                 <p>
                                     <b>Zoom 등의 비대면 화상회의 프로그램과 같은 영상통화방 프로젝트입니다.</b> 방 번호를 입력하여 통화방에 접속할 수 있으며 
@@ -114,7 +141,7 @@ const Projects = () => {
 
                     {/* 게시판 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={4} projectImg={Board} title="각종 게시판 구현" date="2021.09 ~" DB="MySQL" github="https://github.com/stars/PJinsoo/lists/board">
+                        <ProjectTemplate no={5} projectImg={Board} title="각종 게시판 구현" date="2021.09 ~" DB="MySQL" github="https://github.com/stars/PJinsoo/lists/board">
                             <div>
                                 <p>
                                     <b>여러가지 언어로 구현해본 게시판들입니다.</b> 새로운 언어를 학습함에 있어 튜토리얼로 게시판을 구현해보곤 합니다.
@@ -146,7 +173,7 @@ const Projects = () => {
                     
                     {/* 디맥 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={5} projectImg={DJMAX} imgClick title="DJMAX V 성과 기록기" date="2021.11" language="JAVA" DB="MySQL">
+                        <ProjectTemplate no={6} projectImg={DJMAX} imgClick title="DJMAX V 성과 기록기" date="2021.11" language="JAVA" DB="MySQL">
                             <div>
                                 <p>
                                     즐겨하는 <b>리듬게임인 &apos;DJMAX&apos;의 성과를 기록하는 자바 프로그램을 개발해본 프로젝트입니다.</b> 대학 시절 학과 자바 수업의 프로젝트로 진행되었습니다.
