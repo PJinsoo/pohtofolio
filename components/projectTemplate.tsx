@@ -76,7 +76,7 @@ const ProjectTemplate = ({
 
     const imgList = (img:any) => {
         return (
-            <Image src={img} id={no.toString()} alt='projectimg' width={450} height={100} onClick={onClick} className="z-50 shadow-lg rounded-lg border p-1 cursor-pointer"/>
+            <Image src={img} id={no.toString()} alt='projectimg' width={450} height={100} onClick={onClick} className="shadow-lg rounded-lg border p-1 cursor-pointer"/>
         )
     }
 
@@ -88,7 +88,7 @@ const ProjectTemplate = ({
             </div>
             {/* 제목, 날짜 */}
             <span className="text-center text-2xl font-bold mt-3">{title}</span>
-            <span className="text-center text-xm text-gray-500 mb-4">{date}</span>
+            <span className="text-center text-sm text-gray-500 mb-4">{date}</span>
             <div className={`${pageSize >= 1000 ? 'grid grid-cols-2 space-x-4' : 'space-y-4'}`}>
                 {/* 프로젝트 사진 */}
                 <div className='flex justify-center'>

@@ -4,6 +4,26 @@ import PageSize from "@/utility/page-size";
 import DivideLine from "./divide-line";
 import develoop from "../images/career/develoop.jpeg"
 import { useState } from "react";
+import ModalView from "./modal";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation'
+// 하키플레이 구현 사진
+import old_home from '../images/career/hockeyplay/old/old_home.png'
+import old_board_list from '../images/career/hockeyplay/old/old_board-list.png'
+import old_board_view from '../images/career/hockeyplay/old/old_board-view.png'
+import old_board_write from '../images/career/hockeyplay/old/old_board-write.png'
+import old_schedule from '../images/career/hockeyplay/old/old_schedule.png'
+import old_team from '../images/career/hockeyplay/old/old_team-management.png'
+import new_home from '../images/career/hockeyplay/new/new_home.png'
+import new_board_list from '../images/career/hockeyplay/new/new_board-list.png'
+import new_board_view from '../images/career/hockeyplay/new/new_board-view.png'
+import new_board_write from '../images/career/hockeyplay/new/new_board-write.png'
+import new_schedule from '../images/career/hockeyplay/new/new_schedule.png'
+import new_team from '../images/career/hockeyplay/new/new_team-management.png'
+import new_modal from '../images/career/hockeyplay/new/new_match-modal.png'
 
 // 경력
 
@@ -14,6 +34,50 @@ const Career = () => {
     const [intro, setIntro] = useState(false)
     const viewIntro = () => {
         return setIntro(!intro)
+    }
+
+    // 하키플레이 스샷 모달 트리거
+    const [isOpen, setOpen] = useState(false);
+    const hockeyModal = (props:any) => {
+        setOpen(!isOpen);
+    }
+
+    // 하키플레이 스샷 탬플릿 함수
+    const swiperImg = (title:string, oldImg:any, newImg:any) => {
+        return (
+            <>
+                {/* 제목 */}
+                <div>
+                    <span className="mt-2 flex justify-center text-lg text-gray-700 font-semibold">{title}</span>
+                    <span className="flex justify-center text-sm text-gray-600">좌우 스크롤을 통해 더 많은 구현 사진을 볼 수 있어요!</span>
+                </div>
+                {/* 스크린샷 */}
+                <div className="p-2 -mt-8">
+                    {pageSize <= 600 ? (
+                        <div>
+                            <div className="m-10 flex flex-col justify-center">
+                                <Image src={oldImg} alt={'Spring HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <span className="text-center text-gray-600 mt-1">Spring으로 개발된 하키플레이</span>
+                            </div>
+                            <div className="m-10 flex flex-col justify-center">
+                                <Image src={newImg} alt={'Next.JS HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <span className="text-center text-gray-600 mt-1">Next.JS로 재개발한 하키플레이</span>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="flex justify-around ">
+                            <div className="m-10 flex flex-col justify-center">
+                                <Image src={oldImg} alt={'Spring HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <span className="text-center text-gray-600 mt-1">Spring으로 개발된 하키플레이</span>
+                            </div>
+                            <div className="m-10 flex flex-col justify-center">
+                                <Image src={newImg} alt={'Next.JS HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <span className="text-center text-gray-600 mt-1">Next.JS로 재개발한 하키플레이</span>
+                            </div>
+                        </div>)}
+                </div>
+            </>
+        )
     }
 
     return (
@@ -48,7 +112,52 @@ const Career = () => {
                     </div>
                     <hr className="my-4 w-full border-gray-300"/>
                         <div>
-                            <span className="p-2 font-semibold">▎&nbsp;개발 담당 업무</span>
+                            <div className="flex justify-between">
+                                <span className="p-2 font-semibold">▎&nbsp;개발 담당 업무</span>
+                                <span className="mx-2 p-2 bg-blue-500 text-white font-semibold rounded-xl cursor-pointer hover:bg-blue-600" onClick={hockeyModal}>
+                                    구현 사진
+                                </span>
+                                {/* hockeyplay 사진보기 모달 */}
+                                <ModalView isOpen={isOpen}>
+                                    <div className="px-6 py-2 border-b-2 rounded-lg flex justify-between z-50 text-gray-700">
+                                        <span className="font-bold text-2xl">Hockey Play 구현 스크린샷</span>
+                                        <button onClick={hockeyModal}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <Swiper
+                                            spaceBetween={100}
+                                            slidesPerView={1}
+                                            navigation
+                                            pagination={{ clickable: true }}
+                                            allowTouchMove // 터치 허용
+                                            threshold={20} // 터치 감도
+                                        >
+                                            <SwiperSlide className="cursor-pointer">
+                                                {swiperImg("하키플레이 홈 화면", old_home, new_home)}
+                                            </SwiperSlide>
+                                            <SwiperSlide className="cursor-pointer">
+                                                {swiperImg("하키플레이 게시판", old_board_list, new_board_list)}
+                                            </SwiperSlide>
+                                            <SwiperSlide className="cursor-pointer">
+                                                {swiperImg("하키플레이 게시글 조회", old_board_view, new_board_view)}
+                                            </SwiperSlide>
+                                            <SwiperSlide className="cursor-pointer">
+                                                {swiperImg("하키플레이 게시글 작성", old_board_write, new_board_write)}
+                                            </SwiperSlide>
+                                            <SwiperSlide className="cursor-pointer">
+                                                {swiperImg("하키플레이 팀 일정 관리 페이지", old_schedule, new_schedule)}
+                                            </SwiperSlide>
+                                            <SwiperSlide className="cursor-pointer">
+                                                {swiperImg("하키플레이 팀 정보 수정 및 관리 페이지", old_team, new_team)}
+                                            </SwiperSlide>
+                                        </Swiper>
+                                    </div>
+                                </ModalView>
+                            </div>
                             <div className="ml-2 mt-1">
                                 <p>· 게시판의 CRUD 개발</p>
                                 <p>· 게시글 뷰어에 Youtube 랜더링 적용</p>
@@ -67,10 +176,10 @@ const Career = () => {
                             ? (
                             <div>
                                 <div className="flex justify-between">
-                                <span className="text-gray-700 text-sm mt-3 mx-2">담당 업무 자세히 읽기</span>
-                                <span className="mx-2 p-2 bg-blue-500 text-white font-semibold rounded-xl cursor-pointer hover:bg-blue-600" onClick={viewIntro}>
-                                    내용닫기
-                                </span>
+                                    <span className="text-gray-700 text-sm mt-3 mx-2">담당 업무 자세히 읽기</span>
+                                    <span className="mx-2 p-2 bg-blue-500 text-white font-semibold rounded-xl cursor-pointer hover:bg-blue-600" onClick={viewIntro}>
+                                        내용닫기
+                                    </span>
                                 </div>
                                 <div className="mt-2 p-1 text-gray-800">
                                     <p>
