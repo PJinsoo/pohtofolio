@@ -248,7 +248,7 @@ const Career = () => {
                             ) 
                             : (
                             <div className="flex justify-between">
-                                <span className="text-gray-700 text-sm mt-3 mx-2">담당 업무 자세히 읽기</span>
+                                <span className="text-gray-700 text-sm mt-3 mx-2">업무 경험 자세히 읽기</span>
                                 <span className="mx-2 p-2 bg-blue-500 text-white font-semibold rounded-xl cursor-pointer hover:bg-blue-600" onClick={viewIntro}>
                                     상세보기
                                 </span>
