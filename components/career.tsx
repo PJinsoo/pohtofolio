@@ -10,6 +10,7 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'
+import Modal from 'react-modal';
 // 하키플레이 구현 사진
 import old_home from '../images/career/hockeyplay/old/old_home.png'
 import old_board_list from '../images/career/hockeyplay/old/old_board-list.png'
@@ -24,6 +25,7 @@ import new_board_write from '../images/career/hockeyplay/new/new_board-write.png
 import new_schedule from '../images/career/hockeyplay/new/new_schedule.png'
 import new_team from '../images/career/hockeyplay/new/new_team-management.png'
 import new_modal from '../images/career/hockeyplay/new/new_match-modal.png'
+import testImg from '../images/test-img.jpg'
 
 // 경력
 
@@ -44,43 +46,84 @@ const Career = () => {
 
     // 스샷 뷰어 모달 트리거
     const [viewImg, setViewImg] = useState(false);
-    const imgViewModal = () => {
-        setViewImg(!viewImg);
+    const [targetImg, setTargetImg] = useState(testImg);
+
+    // 스샷 뷰어에 알맞는 사진 연결 후 모달 보여주기
+    const imgViewModal = (e:any) => {
+        const {id} = e.target // 클릭한 사진의 정보 가져오기
+        // 홈화면
+        if(id == "home_old") setTargetImg(old_home)
+        if(id == "home_new") setTargetImg(new_home)
+        // 게시판
+        if(id == "board_old") setTargetImg(old_board_list)
+        if(id == "board_new") setTargetImg(new_board_list)
+        // 게시글 조회
+        if(id == "view_old") setTargetImg(old_board_view)
+        if(id == "view_new") setTargetImg(new_board_view)
+        // 게시글 쓰기
+        if(id == "write_old") setTargetImg(old_board_write)
+        if(id == "write_new") setTargetImg(new_board_write)
+        // 경기 일정
+        if(id == "schedule_old") setTargetImg(old_schedule)
+        if(id == "schedule_new") setTargetImg(new_schedule)
+        // 팀 관리
+        if(id == "team_old") setTargetImg(old_team)
+        if(id == "team_new") setTargetImg(new_team)
+        setViewImg(!viewImg) // 모달 출력 on/off
     }
 
     // 하키플레이 스샷 탬플릿 함수
-    const swiperImg = (title:string, oldImg:any, newImg:any) => {
+    const swiperImg = (id:string, title:string, oldImg:any, newImg:any) => {
         return (
             <>
                 {/* 제목 */}
                 <div>
                     <span className="mt-2 flex justify-center text-lg text-gray-700 font-semibold">{title}</span>
-                    <span className="flex justify-center text-sm text-gray-600">좌우 스크롤로 더 확인해보세요!</span>
+                    <span className="flex justify-center text-sm text-gray-600">이미지를 클릭하면 크게 볼 수 있어요!</span>
                 </div>
-                {/* 스크린샷 */}
+                {/* 구 하키와 신 하키 비교 화면 | 이미지 클릭 시 크게 보여주기 */}
                 <div className="p-2 -mt-8">
                     {pageSize <= 600 ? (
                         <div>
                             <div className="m-10 flex flex-col justify-center">
-                                <Image src={oldImg} alt={'Spring HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <Image id={id+"_old"} src={oldImg} alt={'Spring HockeyPlay'} width={400} onClick={imgViewModal} className="p-2 border rounded-md bg-gray-200 shadow"/>
                                 <span className="text-center text-gray-600 mt-1">Spring으로 개발된 기존 하키플레이</span>
                             </div>
                             <div className="m-10 flex flex-col justify-center">
-                                <Image src={newImg} alt={'Next.JS HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <Image id={id+"_new"} src={newImg} alt={'Next.JS HockeyPlay'} width={400} onClick={imgViewModal} className="p-2 border rounded-md bg-gray-200 shadow"/>
                                 <span className="text-center text-gray-600 mt-1">Next.JS로 재개발한 하키플레이</span>
                             </div>
                         </div>
+                        
                     ) : (
                         <div className="flex justify-around ">
                             <div className="m-10 flex flex-col justify-center">
-                                <Image src={oldImg} alt={'Spring HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <Image id={id+"_old"} src={oldImg} alt={'Spring HockeyPlay'} width={400} onClick={imgViewModal} className="p-2 border rounded-md bg-gray-200 shadow"/>
                                 <span className="text-center text-gray-600 mt-1">Spring으로 개발된 기존 하키플레이</span>
                             </div>
                             <div className="m-10 flex flex-col justify-center">
-                                <Image src={newImg} alt={'Next.JS HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
+                                <Image id={id+"_new"} src={newImg} alt={'Next.JS HockeyPlay'} width={400} onClick={imgViewModal} className="p-2 border rounded-md bg-gray-200 shadow"/>
                                 <span className="text-center text-gray-600 mt-1">Next.JS로 재개발한 하키플레이</span>
                             </div>
-                        </div>)}
+                        </div>
+                        )}
+
+                        {/* 클릭된 이미지 크게 보기 모달 출력 */}
+                        <Modal isOpen={viewImg} className="rounded-lg m-10 h-auto w-auto bg-gray-100 border-2 border-gray-300" >
+                            <div className="px-6 py-2 border-b-2 rounded-lg flex justify-between z-50 text-gray-700">
+                                <span className="text-2xl">이미지 클릭으로 돌아가기</span>
+                                <button onClick={imgViewModal}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div>
+                                <div className="m-10 flex justify-center">
+                                    <Image src={targetImg} alt={'imgView'} width={600} onClick={imgViewModal} className="p-1 border rounded-md bg-gray-200 shadow"/>
+                                </div>
+                            </div>
+                        </Modal>
                 </div>
             </>
         )
@@ -143,22 +186,22 @@ const Career = () => {
                                             threshold={20} // 터치 감도
                                         >
                                             <SwiperSlide className="cursor-pointer">
-                                                {swiperImg("하키플레이 홈 화면", old_home, new_home)}
+                                                {swiperImg("home", "하키플레이 홈 화면", old_home, new_home)}
                                             </SwiperSlide>
                                             <SwiperSlide className="cursor-pointer">
-                                                {swiperImg("하키플레이 게시판", old_board_list, new_board_list)}
+                                                {swiperImg("board", "하키플레이 게시판", old_board_list, new_board_list)}
                                             </SwiperSlide>
                                             <SwiperSlide className="cursor-pointer">
-                                                {swiperImg("하키플레이 게시글 조회", old_board_view, new_board_view)}
+                                                {swiperImg("view", "하키플레이 게시글 조회", old_board_view, new_board_view)}
                                             </SwiperSlide>
                                             <SwiperSlide className="cursor-pointer">
-                                                {swiperImg("하키플레이 게시글 작성", old_board_write, new_board_write)}
+                                                {swiperImg("write", "하키플레이 게시글 작성", old_board_write, new_board_write)}
                                             </SwiperSlide>
                                             <SwiperSlide className="cursor-pointer">
-                                                {swiperImg("하키플레이 팀 일정 관리 페이지", old_schedule, new_schedule)}
+                                                {swiperImg("schedule", "하키플레이 팀 일정 관리 페이지", old_schedule, new_schedule)}
                                             </SwiperSlide>
                                             <SwiperSlide className="cursor-pointer">
-                                                {swiperImg("하키플레이 팀 정보 수정 및 관리 페이지", old_team, new_team)}
+                                                {swiperImg("team", "하키플레이 팀 정보 수정 및 관리 페이지", old_team, new_team)}
                                             </SwiperSlide>
                                         </Swiper>
                                     </div>
