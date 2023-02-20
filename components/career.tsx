@@ -103,7 +103,7 @@ const Career = () => {
                             </div>
                             <div className="m-10 flex flex-col justify-center">
                                 <Image id={id+"_new"} src={newImg} alt={'Next.JS HockeyPlay'} width={400} onClick={imgViewModal} className="p-2 border rounded-md bg-gray-200 shadow"/>
-                                <span className="text-center text-gray-600 mt-1">Next.JS로 재개발한 하키플레이</span>
+                                <span className="text-center text-gray-600 mt-1">Next.JS로 재개발한 신규 하키플레이</span>
                             </div>
                         </div>
                         )}
