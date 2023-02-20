@@ -22,7 +22,7 @@ const Projects = () => {
     SwiperCore.use([Navigation, Pagination])
 
     return (
-        <div>
+        <div className="z-0">
             {/* 메뉴 제목 컴포넌트 */}
             <Title
                 title="PROJECTS"
@@ -36,9 +36,6 @@ const Projects = () => {
                     className=""
                     spaceBetween={50}
                     slidesPerView={1}
-                    //onSlideChange={() => console.log('slide change')}
-                    //onSwiper={(swiper) => console.log(swiper)}
-                    //navigation
                     pagination={{ clickable: true }}
                     allowTouchMove // 터치 허용
                     threshold={20} // 터치 감도
