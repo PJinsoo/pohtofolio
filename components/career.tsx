@@ -158,6 +158,7 @@ const Career = () => {
                     <div className="flex flex-col items-center">
                         <span className="text-lg font-bold text-gray-700">:: 주요 담당 업무 ::</span>
                         <p className="font-semibold text-gray-700">스포츠 경기 운영·관리 플랫폼 개발</p>
+                        <p className="text-sm text-gray-600">Next.JS, TypeScript, node.JS</p>
                     </div>
                     <hr className="my-4 w-full border-gray-300"/>
                         <div>
@@ -225,7 +226,7 @@ const Career = () => {
                             ? (
                             <div>
                                 <div className="flex justify-between">
-                                    <span className="text-gray-700 text-sm mt-3 mx-2">담당 업무 자세히 읽기</span>
+                                    <span className="text-gray-700 text-sm mt-3 mx-2">업무 경험 자세히 읽기</span>
                                     <span className="mx-2 p-2 bg-blue-500 text-white font-semibold rounded-xl cursor-pointer hover:bg-blue-600" onClick={viewIntro}>
                                         내용닫기
                                     </span>
@@ -233,11 +234,11 @@ const Career = () => {
                                 <div className="mt-2 p-1 text-gray-800">
                                     <p>
                                         <b>Spring MVC로 개발되어 운영 중인 웹 사이트 &apos;하키플레이(아이스하키 경기 운영·관리 웹 플랫폼)&apos;를 
-                                            React.JS 기반 프레임워크인 Next.JS로 재개발하는 프로젝트에 참여하였습니다.</b>
+                                            TypeScript 기반의 Next.JS로 재개발하는 프로젝트에 참여하였습니다.</b>
                                     </p><br/>
                                     <p>
-                                        해당 프로젝트를 수행하기 위해서 React.JS와 Next.JS를 1달의 기간을 거쳐 학습하였습니다.
-                                        학습의 효과로 Next.JS 환경에 빠르게 적응할 수 있었으며 <b>하키플레이의 Next.JS 재개발 작업에서도 대부분의 페이지를 구현해내는 실적을 올릴 수 있었습니다.</b>
+                                        해당 프로젝트를 수행하기 위해서 TypeScript와 React.JS(Next.JS)를 1달의 기간동안 학습하였습니다.
+                                        학습의 효과로 TypeScript와 Next.JS 환경에 빠르게 적응할 수 있었으며 <b>하키플레이의 Next.JS 재개발 작업에서도 대부분의 페이지를 구현해내는 실적을 올릴 수 있었습니다.</b>
                                     </p><br/>
                                     <p>
                                         더불어 기존의 Spring으로 개발된 하키플레이의 구조를 확인해가며 작업을 진행한 만큼 게시판 제작 수준에 국한되던 <b>제 Spring 실력을, 실제 운영 중인 하나의 웹페이지를 이해할 만큼 성장시킬 수 있었습니다.</b>
