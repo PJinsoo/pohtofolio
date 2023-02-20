@@ -119,7 +119,7 @@ const Career = () => {
                                 </button>
                             </div>
                             <div>
-                                <div className="m-10 flex justify-center">
+                                <div className="m-3 flex justify-center">
                                     <Image src={targetImg} alt={'imgView'} width={600} onClick={imgViewModal} className="p-1 border rounded-md bg-gray-200 shadow"/>
                                 </div>
                             </div>
