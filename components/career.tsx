@@ -49,7 +49,7 @@ const Career = () => {
                 {/* 제목 */}
                 <div>
                     <span className="mt-2 flex justify-center text-lg text-gray-700 font-semibold">{title}</span>
-                    <span className="flex justify-center text-sm text-gray-600">좌우 스크롤을 통해 더 많은 구현 사진을 볼 수 있어요!</span>
+                    <span className="flex justify-center text-sm text-gray-600">좌우 스크롤로 더 확인해보세요!</span>
                 </div>
                 {/* 스크린샷 */}
                 <div className="p-2 -mt-8">
@@ -120,14 +120,14 @@ const Career = () => {
                                 {/* hockeyplay 사진보기 모달 */}
                                 <ModalView isOpen={isOpen}>
                                     <div className="px-6 py-2 border-b-2 rounded-lg flex justify-between z-50 text-gray-700">
-                                        <span className="font-bold text-2xl">Hockey Play 구현 스크린샷</span>
+                                        <span className="font-bold text-2xl">Hockey Play</span>
                                         <button onClick={hockeyModal}>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
                                         </button>
                                     </div>
-                                    <div>
+                                    <div className={`${pageSize <= 600 && 'overflow-y-auto h-[700px]'}`}>
                                         <Swiper
                                             spaceBetween={100}
                                             slidesPerView={1}
