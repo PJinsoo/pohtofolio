@@ -38,8 +38,14 @@ const Career = () => {
 
     // 하키플레이 스샷 모달 트리거
     const [isOpen, setOpen] = useState(false);
-    const hockeyModal = (props:any) => {
+    const hockeyModal = () => {
         setOpen(!isOpen);
+    }
+
+    // 스샷 뷰어 모달 트리거
+    const [viewImg, setViewImg] = useState(false);
+    const imgViewModal = () => {
+        setViewImg(!viewImg);
     }
 
     // 하키플레이 스샷 탬플릿 함수
@@ -57,7 +63,7 @@ const Career = () => {
                         <div>
                             <div className="m-10 flex flex-col justify-center">
                                 <Image src={oldImg} alt={'Spring HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
-                                <span className="text-center text-gray-600 mt-1">Spring으로 개발된 하키플레이</span>
+                                <span className="text-center text-gray-600 mt-1">Spring으로 개발된 기존 하키플레이</span>
                             </div>
                             <div className="m-10 flex flex-col justify-center">
                                 <Image src={newImg} alt={'Next.JS HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
@@ -68,7 +74,7 @@ const Career = () => {
                         <div className="flex justify-around ">
                             <div className="m-10 flex flex-col justify-center">
                                 <Image src={oldImg} alt={'Spring HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
-                                <span className="text-center text-gray-600 mt-1">Spring으로 개발된 하키플레이</span>
+                                <span className="text-center text-gray-600 mt-1">Spring으로 개발된 기존 하키플레이</span>
                             </div>
                             <div className="m-10 flex flex-col justify-center">
                                 <Image src={newImg} alt={'Next.JS HockeyPlay'} width={400} className="p-2 border rounded-md bg-gray-200 shadow"/>
@@ -127,7 +133,7 @@ const Career = () => {
                                             </svg>
                                         </button>
                                     </div>
-                                    <div className={`${pageSize <= 600 && 'overflow-y-auto h-[700px]'}`}>
+                                    <div className={`${pageSize <= 600 && 'overflow-y-auto h-[500px]'}`}>
                                         <Swiper
                                             spaceBetween={100}
                                             slidesPerView={1}
