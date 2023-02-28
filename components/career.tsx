@@ -6,7 +6,6 @@ import develoop from "../images/career/develoop.jpeg"
 import { useState } from "react";
 import ModalView from "./modal";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from "swiper";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'
@@ -24,7 +23,6 @@ import new_board_view from '../images/career/hockeyplay/new/new_board-view.png'
 import new_board_write from '../images/career/hockeyplay/new/new_board-write.png'
 import new_schedule from '../images/career/hockeyplay/new/new_schedule.png'
 import new_team from '../images/career/hockeyplay/new/new_team-management.png'
-import new_modal from '../images/career/hockeyplay/new/new_match-modal.png'
 import testImg from '../images/test-img.jpg'
 
 // 경력
@@ -48,7 +46,7 @@ const Career = () => {
     const [viewImg, setViewImg] = useState(false);
     const [targetImg, setTargetImg] = useState(testImg);
 
-    // 스샷 뷰어에 알맞는 사진 연결 후 모달 보여주기
+    // 모달에 알맞는 사진 보여주기
     const imgViewModal = (e:any) => {
         const {id} = e.target // 클릭한 사진의 정보 가져오기
         // 홈화면
@@ -147,7 +145,7 @@ const Career = () => {
                 <div className={`h-full`}>
                     <div className="text-center m-2 flex flex-col">
                         <span className="text-xl font-bold text-gray-800 -mx-10">(주) 디벨룹</span>
-                        <span className="text-sm text-gray-600">2022.09 ~ 현재 재직중</span>
+                        <span className="text-sm text-gray-600">2022.09 ~ 2023.02 (6개월)</span>
                     </div>
                     <div className="flex flex-col items-center">
                         <p className="text-gray-700">
@@ -189,18 +187,23 @@ const Career = () => {
                                             <SwiperSlide className="cursor-pointer">
                                                 {swiperImg("home", "하키플레이 홈 화면", old_home, new_home)}
                                             </SwiperSlide>
+
                                             <SwiperSlide className="cursor-pointer">
                                                 {swiperImg("board", "하키플레이 게시판", old_board_list, new_board_list)}
                                             </SwiperSlide>
+
                                             <SwiperSlide className="cursor-pointer">
                                                 {swiperImg("view", "하키플레이 게시글 조회", old_board_view, new_board_view)}
                                             </SwiperSlide>
+
                                             <SwiperSlide className="cursor-pointer">
                                                 {swiperImg("write", "하키플레이 게시글 작성", old_board_write, new_board_write)}
                                             </SwiperSlide>
+
                                             <SwiperSlide className="cursor-pointer">
                                                 {swiperImg("schedule", "하키플레이 팀 일정 관리 페이지", old_schedule, new_schedule)}
                                             </SwiperSlide>
+
                                             <SwiperSlide className="cursor-pointer">
                                                 {swiperImg("team", "하키플레이 팀 정보 수정 및 관리 페이지", old_team, new_team)}
                                             </SwiperSlide>
@@ -244,8 +247,7 @@ const Career = () => {
                                         더불어 기존의 Spring으로 개발된 하키플레이의 구조를 확인해가며 작업을 진행한 만큼 게시판 제작 수준에 국한되던 <b>제 Spring 실력을, 실제 운영 중인 하나의 웹페이지를 이해할 만큼 성장시킬 수 있었습니다.</b>
                                     </p>
                                 </div>
-                            </div>
-                            ) 
+                            </div>)
                             : (
                             <div className="flex justify-between">
                                 <span className="text-gray-700 text-sm mt-3 mx-2">업무 경험 자세히 읽기</span>
