@@ -9,7 +9,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation'
 import DivideLine from "./divide-line";
 // 프로젝트 이미지
-import PortfolioImg from "../images/project-img/portfolio/main.jpg"
+import PortfolioImg from "../images/project-img/portfolio/useFace.jpg"
+import PortfolioImg_notFace from "../images/project-img/portfolio/notUseFace.png"
 import MoiveChartImg from "../images/project-img/movie/main.png"
 import CarrotEnter from "../images/project-img/carrot/0-enter.png"
 import Zoom from "../images/project-img/zoom/call.png"
@@ -42,17 +43,17 @@ const Projects = () => {
                 >
                     {/* 포폴 */}
                     <SwiperSlide className="cursor-pointer">
-                        <ProjectTemplate no={1} projectImg={PortfolioImg} title="JinSoo's Portfolio" date="2023.02" front="Next.JS | TypeScript" github="https://github.com/PJinsoo/portfolio">
+                        <ProjectTemplate no={1} projectImg={PortfolioImg_notFace} title="JinSoo's Portfolio" date="2023.02" front="Next.JS | TypeScript" github="https://github.com/PJinsoo/portfolio">
                             <div>
                                 <p>
-                                    <b>지금 보고 계시는 포트폴리오 프로젝트입니다!</b> 그동안 익힌 스킬을 하나의 결과물로 만들어보고 싶어 시작한 프로젝트입니다.
+                                    <b>지금 보고 계시는 포트폴리오 프로젝트입니다!</b> 그동안 익힌 스킬을 하나의 결과물로 만들어보고 싶어 시작하여 완료한 프로젝트입니다.
                                 </p><br/>
                                 <p>
                                     <b>TypeScript와 Next.JS를 사용하여 구현했습니다.</b> 디자인은 Tailwind CSS를, 서버 배포는 Vercel을 이용해 배포 중입니다.
                                 </p><br/>
                                 <p>
                                     <b>화면 크기에 따라 레이아웃 구조가 다르게 보일 반응형 웹으로 구현하였습니다.</b> 모바일 화면과 PC브라우저 화면에서 다르게 보일 것 입니다!
-                                    또한 Swiper나 모달 사용에서 오픈 라이브러리를 적극 활용하였습니다. 
+                                    또한 스와이프나 모달 사용에서 오픈 라이브러리를 적극 활용하였습니다. 
                                 </p><br/>
                                 <p>
                                     이렇게 프로젝트를 진행하며 <b>그동안 쌓은 React.JS의 실력을 다듬을 수 있었습니다.</b> 앞으로의 제 커리어를 

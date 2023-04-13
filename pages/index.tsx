@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import AboutMe from "@/components/about-me";
+import AboutMeNotFace from "@/components/about-me-NotMyFace";
 import HeightSkills from "@/components/skills-height";
 import WidthSkills from "@/components/skills-width";
 import PageSize from "@/utility/page-size";
@@ -37,7 +38,7 @@ const Home = () => {
 
 
         {/* 인적사항 소개 화면 */}
-        <AboutMe/>
+        <AboutMeNotFace/>
 
         {/* 페이지 사이즈에 따라 다르게 보여줄 기술스택 화면 */}
         {pageSize >= 1300 ? <WidthSkills/> : <HeightSkills/>}
